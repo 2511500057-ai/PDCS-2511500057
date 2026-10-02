@@ -49,7 +49,7 @@ $q = "SELECT
         FROM mahasiswa m
         LEFT JOIN jurusan j
         ON m.jurusan_id = j.id
-        WHERE m.nama LIKE = '%$search%'
+        WHERE m.nama LIKE '%$search%'
         OR m.nim LIKE '%$search%'
         ORDER BY m.id DESC";
 
