@@ -140,7 +140,11 @@ if (isset($_GET['page']) || isset($_GET['limit'])) {
             200);
 }
 
-$q = "SELECT m.id, m.nama, m.nim, j.nama_jurusan AS jurusan FROM mahasiswa m LEFT JOIN jurusan j ON m.jurusan_id = j.id ORDER BY m.id DESC";
+//get all
+$q = "SELECT m.id, m.nama, m.nim, j.nama_jurusan AS jurusan
+FROM mahasiswa m
+LEFT JOIN jurusan j ON m.jurusan_id = j.id
+ORDER BY m.id DESC";
 
 $r = mysqli_query($koneksi, $q);
 
